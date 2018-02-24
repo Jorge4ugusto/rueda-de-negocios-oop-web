@@ -1,5 +1,5 @@
 <?php
-require_once'Conexion.php';
+require_once 'Conexion.php';
 require_once 'Rubro.php';
 $conexion = new Conexion();
 $rubro = new Rubro();
@@ -81,7 +81,7 @@ $empresa = new Empresa();
 									<div class="select" tabindex="-1">
 									<select name="SeleccionarRubros">
 										<?php
-										$lista = $rubro::listarRubro();
+										$lista = Rubro::listarRubro();
 										while($row = mysqli_fetch_assoc($lista)){
 										 ?>
 										 <!--<option></option>-->
