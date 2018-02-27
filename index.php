@@ -2,7 +2,6 @@
 require_once 'Conexion.php';
 require_once 'Rubro.php';
 $conexion = new Conexion();
-$rubro = new Rubro();
 $empresa = new Empresa();
 ?>
 <!DOCTYPE HTML>
