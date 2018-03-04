@@ -71,7 +71,7 @@ class Empresa
   {
     $this->ciudad = $ciudad;
   }
-  function __construct($nombre,$correo,$web,$direccion,$telefono,$rubro,$pais,$ciudad,$tipo,$representante)
+  function __construct($nombre = null, $correo = null, $web = null, $direccion = null, $telefono = null, $rubro = null, $pais = null, $ciudad = null, $tipo = null, $representante = null)
   {
     # code...
     $this->nombre = $nombre;
@@ -93,7 +93,7 @@ class Empresa
   }
   public function ListarEmpresa()
   {
-    Conexion::sql(" SELECT nombreempresa,nombre_rubro,direccion,telefono,pais,ciudad
+    return Conexion::sql(" SELECT nombreempresa,nombre_rubro,direccion,telefono,pais,ciudad
       FROM EMPRESA,RUBRO
       WHERE EMPRESA.id_rubro = RUBRO.id_rubro
       AND EMPRESA.estado = 1 ");

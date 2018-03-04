@@ -1,7 +1,6 @@
 <?php
-require_once 'Conexion.php';
 require_once 'Rubro.php';
-$conexion = new Conexion();
+require_once 'Empresa.php';
 $empresa = new Empresa();
 ?>
 <!DOCTYPE HTML>
@@ -118,7 +117,15 @@ $empresa = new Empresa();
 								</div>
 							</div>
 						</form>
-						<table>
+						<div id="first" class="main">
+							<header>
+								<div class="container">
+									<h2>Empresas Registradas</h2>
+								</div>
+							</header>
+						</div>
+						<div class="table-wrapper">
+						<table class="default">
 							<thead>
 								<th>Empresa</th>
 								<th>Rubro</th>
@@ -133,7 +140,7 @@ $empresa = new Empresa();
 									while($row = mysqli_fetch_assoc($listEmpresa)){
 									 ?>
 									 <tr>
-										 <td><?=$row['nombreempresa']?></td>
+										 <td id="ultimo"><?=$row['nombreempresa']?></td>
 										 <td><?=$row['nombre_rubro']?></td>
 										 <td><?=$row['direccion']?></td>
 										 <td><?=$row['telefono']?></td>
@@ -145,6 +152,7 @@ $empresa = new Empresa();
 									 ?>
 							</tbody>
 						</table>
+						</div>
 					</div>
 				</div>
 			</section>
