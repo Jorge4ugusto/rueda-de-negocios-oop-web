@@ -44,5 +44,20 @@
 			});
 
 	});
+	// Ajax Send Form method
+	$(document).on('ready',function(){
+    $('#enviar').click(function(){
+        var url = "RegistrarEmpresa.php";
+        $.ajax({
+           type: "POST",
+           url: url,
+           data: $("#formulario").serialize(),
+           success: function(data)
+           {
+             $('#ultimo').html(data);
+           }
+       });
+    });
+});
 
 })(jQuery);

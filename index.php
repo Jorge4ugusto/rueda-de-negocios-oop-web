@@ -65,7 +65,7 @@ $empresa = new Empresa();
 			<section id="fourth" class="main">
 				<div class="content style4 featured">
 					<div class="container 75%">
-						<form method="post" action="RegistrarEmpresa.php">
+						<form method="post" id="formulario">
 							<div class="row 50%">
 								<div class="6u 12u(mobile)"><input type="text" name="empresa" required="" placeholder="Nombre de la Empresa"/></div>
 								<div class="6u 12u(mobile)"><input type="email" name="correo" required="" placeholder="Email" /></div>
@@ -111,7 +111,7 @@ $empresa = new Empresa();
 							<div class="row">
 								<div class="12u">
 									<ul class="actions">
-										<li><input type="submit" name="Enviar" class="button" value="Enviar" /></li>
+										<li><input type="submit" id="enviar" name="Enviar" class="button" value="Enviar" /></li>
 										<li><input type="reset" class="button alt" value="Cancelar" /></li>
 									</ul>
 								</div>
